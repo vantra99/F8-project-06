@@ -27,6 +27,7 @@ a {
   text-decoration: none;
 }
 .btn {
+  display: inline-block;
   width: 170px;
   height: 62px;
   background: #5d3bee;
@@ -35,6 +36,9 @@ a {
   font-size: 1.8rem;
   font-weight: 700;
   line-height: 1.67;
+}
+.btn:hover {
+  cursor: pointer;
 }
 
 /*=========== Mixin ============*/
@@ -63,10 +67,10 @@ a {
 }
 
 .header {
-  .header-inner {
+  &-inner {
     @include flexCenter($w: space-between);
   }
-  .header-logo {
+  &-logo {
     @include flexCenter($w: null);
     width: 258px;
     height: 46px;
@@ -86,7 +90,7 @@ a {
       text-decoration-line: underline;
     }
   }
-  .header-navbar {
+  &-navbar {
     &__item {
       position: relative;
       color: #51586a;
@@ -238,15 +242,12 @@ a {
         margin-left: 10px;
         color: #080415;
       }
-      &:nth-child(4),
-      &:last-child {
-        justify-content: flex-end;
-      }
     }
   }
 }
 
 .special {
+  padding-bottom: 140px;
   &-top {
     text-align: center;
     &__heading {
@@ -366,6 +367,7 @@ a {
     }
   }
   &-btn {
+    display: block;
     margin-left: 50%;
     transform: translateX(-50%);
     background-color: #ffffff;
@@ -441,10 +443,9 @@ a {
   }
   &-body {
     margin-top: 70px;
-    width: 1170px;
+    width: 100%;
     height: 628px;
-    margin-left: 50%;
-    transform: translateX(-50%);
+    @include flexCenter();
     video {
       width: 100%;
       height: 100%;
@@ -455,6 +456,7 @@ a {
 .people {
   height: 1035px;
   background-color: #fbfaff;
+  overflow: hidden;
   &-inner {
     text-align: center;
     &__heading {
@@ -552,7 +554,6 @@ a {
 .ask {
   &-inner {
     width: 1010px;
-    height: 885px;
     &__heading {
       color: #080415;
       font-size: 5.6rem;
@@ -597,11 +598,15 @@ a {
         display: flex;
         transform: translateX(-50px);
         position: relative;
+        height: 50px;
         figure:last-child {
           position: absolute;
           top: 0;
           left: 0;
           visibility: hidden;
+        }
+        &:hover {
+          cursor: pointer;
         }
       }
     }
@@ -636,5 +641,109 @@ a {
     figure:first-child {
     visibility: hidden;
     opacity: 0;
+  }
+}
+
+.atmos {
+  padding-top: 160px;
+  text-align: center;
+  &-heading {
+    color: #080415;
+    font-size: 5.6rem;
+    font-weight: 500;
+    line-height: 1.18;
+    letter-spacing: -0.224rem;
+  }
+  &-desc {
+    display: inline-block;
+    width: 528px;
+    color: #51586a;
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 1.67;
+    padding: 20px 0 30px;
+  }
+  &-link {
+    color: #5d3bee;
+    font-size: 3.2rem;
+    font-weight: 500;
+    line-height: 1.25;
+    letter-spacing: -0.128rem;
+    text-decoration-line: underline;
+    margin-bottom: 70px;
+  }
+  &-photo {
+    display: inline-block;
+    height: 529px;
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.book {
+  padding-top: 140px;
+  padding-bottom: 50px;
+  text-align: center;
+  &-inner {
+    width: 100%;
+    height: 488px;
+    background-image: url(/assets/img/book-bg.png);
+    background-size: cover;
+    &__emoji {
+      margin-top: 68px;
+      width: 90px;
+      height: 90px;
+    }
+    &__heading {
+      color: #080415;
+      font-size: 5.6rem;
+      font-weight: 500;
+      line-height: 1.18;
+      letter-spacing: -0.224rem;
+      padding: 10px 0 15px;
+    }
+    &__desc {
+      display: inline-block;
+      width: 570px;
+      color: #51586a;
+      font-size: 1.8rem;
+      font-weight: 400;
+      line-height: 1.67;
+    }
+    &__btn {
+      display: block;
+      margin-left: 50%;
+      transform: translateX(-50%);
+      margin-top: 20px;
+    }
+  }
+}
+
+.footer {
+  width: 100vw;
+  @include flexCenter($w: null);
+  flex-direction: column;
+  &-line {
+    display: block;
+    width: 1429px;
+    height: 1px;
+    background-color: #0c0720;
+  }
+  &-text {
+    padding: 18px 0 30px;
+    display: flex;
+    &__copyright {
+      padding-right: 515px;
+    }
+    &__policy {
+      padding: 0 20px;
+    }
+    &__terms {
+      padding: 0 20px;
+      border-left: 1px solid #999;
+    }
   }
 }
