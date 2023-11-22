@@ -14,7 +14,7 @@
   </head>
   <body>
     <div class="header">
-      <div class="container-fluid container-custom">
+      <div class="container container-custom">
         <div class="row">
           <div class="col">
             <div class="header-inner">
@@ -22,7 +22,40 @@
                 <a class="header-logo__icon">
                   <img src="./assets/img/header-logo.svg" alt="logo" />
                 </a>
-                <a href="#" class="header-logo__link">hi@arif.interactive</a>
+                <label for="" class="header-logo__menu">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="34"
+                    height="34"
+                    viewBox="0 0 34 34"
+                    fill="none"
+                  >
+                    <circle
+                      opacity="0.2"
+                      cx="17"
+                      cy="17"
+                      r="16"
+                      stroke="#5D3BEE"
+                    />
+                    <path
+                      d="M10 20H25"
+                      stroke="#5D3BEE"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M10 14H25"
+                      stroke="#5D3BEE"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </label>
+                <a href="mailto:hi@arif.interactive" class="header-logo__link"
+                  >hi@arif.interactive</a
+                >
               </div>
               <figure class="header-icon">
                 <img src="./assets/img/header-icon.svg" alt="icon" />
@@ -40,8 +73,8 @@
     </div>
     <div class="hero">
       <div class="container">
-        <div class="row row-cols-lg-2">
-          <div class="col">
+        <div class="row row-cols-lg-2 row-cols-1">
+          <div class="col col-lg-6">
             <div class="hero-photo">
               <figure class="hero-photo__bg">
                 <img src="./assets/img/hero-bg.svg" alt="bg" />
@@ -51,7 +84,7 @@
               </figure>
             </div>
           </div>
-          <section class="col-lg-5 offset-1">
+          <section class="col col-lg-5 offset-lg-1 offset-0">
             <div class="hero-text">
               <h1 class="hero-text__heading">An Interactive Designer</h1>
               <p class="hero-text__desc">
@@ -208,7 +241,17 @@
           </div>
         </div>
         <div class="special-body">
-          <div class="row row-cols-lg-3">
+          <input
+            type="radio"
+            name="special"
+            id="special-slider1"
+            hidden
+            checked
+          />
+          <input type="radio" name="special" id="special-slider2" hidden />
+          <input type="radio" name="special" id="special-slider3" hidden />
+
+          <div class="row row-cols-lg-3 row-cols-3 special-scroll">
             <!-- item-01 -->
             <div class="col">
               <section class="special-body__item">
@@ -249,6 +292,9 @@
               </section>
             </div>
           </div>
+          <label for="special-slider1" class="special-label"></label>
+          <label for="special-slider2" class="special-label"></label>
+          <label for="special-slider3" class="special-label"></label>
         </div>
       </div>
     </div>
@@ -268,7 +314,7 @@
           </div>
         </div>
         <div class="project-body">
-          <div class="row row-cols-lg-2 gy-lg-3">
+          <div class="row row-cols-lg-2 gy-lg-3 row-cols-1 gy-3">
             <!-- item-01 -->
             <div class="col">
               <section class="project-body__item">
@@ -336,7 +382,7 @@
     </div>
     <div class="designer">
       <div class="container">
-        <div class="row row-cols-lg-1">
+        <div class="row row-cols-1">
           <div class="col">
             <div class="designer-top">
               <div class="designer-top__hey">
@@ -432,99 +478,109 @@
               <input type="radio" name="item" id="item5" hidden />
               <div class="ask-inner__group">
                 <div class="ask-inner__item">
-                  <h2 class="item__heading">
-                    What type of projects do you take on?
-                  </h2>
+                  <div class="item-heading__group">
+                    <h2 class="item__heading">What is your hourly rate?</h2>
+                    <label for="item1" class="ask-inner__action">
+                      <figure>
+                        <img src="./assets/img/ask-01.svg" alt="" />
+                      </figure>
+                      <figure>
+                        <img src="./assets/img/ask-02.svg" alt="" />
+                      </figure>
+                    </label>
+                  </div>
                   <p class="item__desc">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
                     urna, non nisl tincidunt ut elementum turpis.
                   </p>
                   <div class="item__line"></div>
                 </div>
-                <label for="item1" class="ask-inner__action">
-                  <figure>
-                    <img src="./assets/img/ask-01.svg" alt="" />
-                  </figure>
-                  <figure>
-                    <img src="./assets/img/ask-02.svg" alt="" />
-                  </figure>
-                </label>
               </div>
               <div class="ask-inner__group">
                 <div class="ask-inner__item">
-                  <h2 class="item__heading">
-                    What type of projects do you take on?
-                  </h2>
+                  <div class="item-heading__group">
+                    <h2 class="item__heading">
+                      What type of projects do you take on?
+                    </h2>
+                    <label for="item2" class="ask-inner__action">
+                      <figure>
+                        <img src="./assets/img/ask-01.svg" alt="" />
+                      </figure>
+                      <figure>
+                        <img src="./assets/img/ask-02.svg" alt="" />
+                      </figure>
+                    </label>
+                  </div>
                   <p class="item__desc">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
                     urna, non nisl tincidunt ut elementum turpis.
                   </p>
                   <div class="item__line"></div>
                 </div>
-                <label for="item2" class="ask-inner__action">
-                  <figure>
-                    <img src="./assets/img/ask-01.svg" alt="" />
-                  </figure>
-                  <figure>
-                    <img src="./assets/img/ask-02.svg" alt="" />
-                  </figure>
-                </label>
               </div>
               <div class="ask-inner__group">
                 <div class="ask-inner__item">
-                  <h2 class="item__heading">
-                    How do you charge for projects ?
-                  </h2>
+                  <div class="item-heading__group">
+                    <h2 class="item__heading">
+                      How do you charge for projects ?
+                    </h2>
+                    <label for="item3" class="ask-inner__action">
+                      <figure>
+                        <img src="./assets/img/ask-01.svg" alt="" />
+                      </figure>
+                      <figure>
+                        <img src="./assets/img/ask-02.svg" alt="" />
+                      </figure>
+                    </label>
+                  </div>
                   <p class="item__desc">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
                     urna, non nisl tincidunt ut elementum turpis.
                   </p>
                   <div class="item__line"></div>
                 </div>
-                <label for="item3" class="ask-inner__action">
-                  <figure>
-                    <img src="./assets/img/ask-01.svg" alt="" />
-                  </figure>
-                  <figure>
-                    <img src="./assets/img/ask-02.svg" alt="" />
-                  </figure>
-                </label>
               </div>
               <div class="ask-inner__group">
                 <div class="ask-inner__item">
-                  <h2 class="item__heading">What time-zone do you work in?</h2>
+                  <div class="item-heading__group">
+                    <h2 class="item__heading">
+                      What time-zone do you work in?
+                    </h2>
+                    <label for="item4" class="ask-inner__action">
+                      <figure>
+                        <img src="./assets/img/ask-01.svg" alt="" />
+                      </figure>
+                      <figure>
+                        <img src="./assets/img/ask-02.svg" alt="" />
+                      </figure>
+                    </label>
+                  </div>
                   <p class="item__desc">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
                     urna, non nisl tincidunt ut elementum turpis.
                   </p>
                   <div class="item__line"></div>
                 </div>
-                <label for="item4" class="ask-inner__action">
-                  <figure>
-                    <img src="./assets/img/ask-01.svg" alt="" />
-                  </figure>
-                  <figure>
-                    <img src="./assets/img/ask-02.svg" alt="" />
-                  </figure>
-                </label>
               </div>
               <div class="ask-inner__group">
                 <div class="ask-inner__item">
-                  <h2 class="item__heading">How often can we communicate?</h2>
+                  <div class="item-heading__group">
+                    <h2 class="item__heading">How often can we communicate?</h2>
+                    <label for="item5" class="ask-inner__action">
+                      <figure>
+                        <img src="./assets/img/ask-01.svg" alt="" />
+                      </figure>
+                      <figure>
+                        <img src="./assets/img/ask-02.svg" alt="" />
+                      </figure>
+                    </label>
+                  </div>
                   <p class="item__desc">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
                     urna, non nisl tincidunt ut elementum turpis.
                   </p>
                   <div class="item__line"></div>
                 </div>
-                <label for="item5" class="ask-inner__action">
-                  <figure>
-                    <img src="./assets/img/ask-01.svg" alt="" />
-                  </figure>
-                  <figure>
-                    <img src="./assets/img/ask-02.svg" alt="" />
-                  </figure>
-                </label>
               </div>
             </div>
           </div>
@@ -540,26 +596,53 @@
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. In urna,
               non nisl tincidunt ut elementum turpis.
             </p>
-            <div class="atmos-link">@interaction_arif</div>
+            <a href="mailto:@interaction_arif" class="atmos-link"
+              >@interaction_arif</a
+            >
           </div>
         </div>
-        <div class="row row-cols-lg-3">
-          <div class="col">
+        <input
+          type="radio"
+          name="atmos"
+          id="atmos1"
+          class="atmos-slider1"
+          hidden
+          checked
+        />
+        <input
+          type="radio"
+          name="atmos"
+          id="atmos2"
+          class="atmos-slider2"
+          hidden
+        />
+        <input
+          type="radio"
+          name="atmos"
+          id="atmos3"
+          class="atmos-slider3"
+          hidden
+        />
+        <div class="row row-cols-3 atmos-mobile">
+          <div class="col atmos-pic">
             <figure class="atmos-photo">
               <img src="./assets/img/atmos-01.jpg" alt="" />
             </figure>
           </div>
-          <div class="col">
+          <div class="col atmos-pic">
             <figure class="atmos-photo">
               <img src="./assets/img/atmos-02.jpg" alt="" />
             </figure>
           </div>
-          <div class="col">
+          <div class="col atmos-pic">
             <figure class="atmos-photo">
               <img src="./assets/img/atmos-03.jpg" alt="" />
             </figure>
           </div>
         </div>
+        <label for="atmos1" class="atmos-label"></label>
+        <label for="atmos2" class="atmos-label"></label>
+        <label for="atmos3" class="atmos-label"></label>
       </div>
     </div>
     <div class="book">
@@ -584,7 +667,7 @@
       </div>
     </div>
     <div class="header">
-      <div class="container-fluid container-custom">
+      <div class="container container-custom">
         <div class="row">
           <div class="col">
             <div class="header-inner">
@@ -592,7 +675,40 @@
                 <a class="header-logo__icon">
                   <img src="./assets/img/header-logo.svg" alt="logo" />
                 </a>
-                <a href="#" class="header-logo__link">hi@arif.interactive</a>
+                <label for="" class="header-logo__menu">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="34"
+                    height="34"
+                    viewBox="0 0 34 34"
+                    fill="none"
+                  >
+                    <circle
+                      opacity="0.2"
+                      cx="17"
+                      cy="17"
+                      r="16"
+                      stroke="#5D3BEE"
+                    />
+                    <path
+                      d="M10 20H25"
+                      stroke="#5D3BEE"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M10 14H25"
+                      stroke="#5D3BEE"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </label>
+                <a href="mailto:hi@arif.interactive" class="header-logo__link"
+                  >hi@arif.interactive</a
+                >
               </div>
               <figure class="header-icon">
                 <img src="./assets/img/header-icon.svg" alt="icon" />
@@ -610,12 +726,12 @@
     </div>
     <footer class="footer">
       <span class="footer-line"></span>
+      <small class="footer-copyright"
+        >©interactiveArif 2021. All rights reserved.</small
+      >
       <div class="footer-text">
-        <small class="footer-text__copyright"
-          >©interactiveArif 2021. All rights reserved.</small
-        >
-        <p class="footer-text__policy">Privacy Policy</p>
-        <p class="footer-text__terms">Terms of Conditions</p>
+        <a href="#!" class="footer-text__policy">Privacy Policy</a>
+        <a href="#!" class="footer-text__terms">Terms of Conditions</a>
       </div>
     </footer>
   </body>

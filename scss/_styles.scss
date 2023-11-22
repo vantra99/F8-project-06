@@ -27,9 +27,9 @@ a {
   text-decoration: none;
 }
 .btn {
-  display: inline-block;
-  width: 170px;
-  height: 62px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: #5d3bee;
   padding: 16px 37px;
   color: #fdfdfd;
@@ -39,6 +39,7 @@ a {
 }
 .btn:hover {
   cursor: pointer;
+  opacity: 0.8;
 }
 
 /*=========== Mixin ============*/
@@ -367,7 +368,6 @@ a {
     }
   }
   &-btn {
-    display: block;
     margin-left: 50%;
     transform: translateX(-50%);
     background-color: #ffffff;
@@ -443,7 +443,7 @@ a {
   }
   &-body {
     margin-top: 70px;
-    width: 100%;
+    width: 1170px;
     height: 628px;
     @include flexCenter();
     video {
@@ -564,7 +564,10 @@ a {
     }
     &__group {
       margin-top: 80px;
-      display: flex;
+      .item-heading__group {
+        display: flex;
+        justify-content: space-between;
+      }
       .item__heading {
         color: #080415;
         font-size: 3.2rem;
@@ -596,7 +599,6 @@ a {
       }
       .ask-inner__action {
         display: flex;
-        transform: translateX(-50px);
         position: relative;
         height: 50px;
         figure:last-child {
@@ -664,6 +666,7 @@ a {
     padding: 20px 0 30px;
   }
   &-link {
+    display: block;
     color: #5d3bee;
     font-size: 3.2rem;
     font-weight: 500;
@@ -724,20 +727,32 @@ a {
 
 .footer {
   width: 100vw;
-  @include flexCenter($w: null);
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   &-line {
-    display: block;
+    grid-column: span 2;
     width: 1429px;
     height: 1px;
     background-color: #0c0720;
   }
+  &-copyright {
+    display: flex;
+    justify-content: center;
+    color: #525771;
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 1.67;
+    padding: 18px 0 30px;
+  }
   &-text {
     padding: 18px 0 30px;
     display: flex;
-    &__copyright {
-      padding-right: 515px;
+    justify-content: center;
+    > * {
+      color: #525771;
+      font-size: 1.8rem;
     }
+
     &__policy {
       padding: 0 20px;
     }
