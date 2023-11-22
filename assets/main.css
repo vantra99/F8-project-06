@@ -1692,13 +1692,15 @@ a {
 }
 .designer-body {
   margin-top: 70px;
-  width: 1170px;
-  height: 628px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  position: relative;
+  width: 100%;
+  padding-top: 53.67%;
+  background-color: #000;
 }
 .designer-body video {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
 }
@@ -2196,9 +2198,7 @@ input:nth-of-type(5):checked ~ .ask-inner__group:nth-of-type(5) figure:first-chi
     height: 400px;
   }
   .hero-photo__bg {
-    top: 0;
-    left: -100px;
-    width: 100%;
+    left: 0px;
     height: 402px;
   }
   .hero-photo__bg img {
@@ -2427,12 +2427,6 @@ input:nth-of-type(5):checked ~ .ask-inner__group:nth-of-type(5) figure:first-chi
   }
   .designer-body {
     margin-top: 0;
-    width: 100%;
-    height: 276px;
-  }
-  .designer-body video {
-    width: 350px;
-    object-fit: cover;
   }
   .people {
     overflow: initial;
