@@ -307,6 +307,11 @@ a {
 .project {
   background-color: #5d3bee;
   height: 1014px;
+  // .bg-color {
+  //   box-shadow: 0 0 0 100vmax var(--bg-color);
+  //   clip-path: inset(0 -100vmax);
+  //   --bg-color: blue;
+  // }
   &-top {
     display: flex;
     &__heading {
@@ -445,7 +450,8 @@ a {
     margin-top: 70px;
     position: relative;
     width: 100%;
-    padding-top: 53.67%;
+    // padding-top: 53.67%;
+    aspect-ratio: 16 / 9;
     background-color: #000;
     video {
       position: absolute;
