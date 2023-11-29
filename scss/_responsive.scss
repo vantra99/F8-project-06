@@ -1,3 +1,17 @@
+@mixin gridPlayout($column, $space) {
+  --number-columns: #{$column};
+  --space: #{$space};
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: $space;
+  margin-left: calc(-1 * $space);
+
+  > * {
+    width: calc((100% / $column) - $space);
+    margin-left: $space;
+  }
+}
+
 // Large devices (desktops, 992px and up)
 @media screen and (min-width: 992px) {
   .header {
@@ -5,9 +19,16 @@
       display: none;
     }
   }
+  .overplay-mobile,
   .atmos-label,
   .special-label {
     display: none;
+  }
+  .client-social {
+    &__item:nth-child(4),
+    &__item:last-child {
+      padding-left: 15px;
+    }
   }
 }
 
@@ -16,6 +37,39 @@
   .hero {
     .row {
       flex-direction: column-reverse;
+    }
+  }
+  .client {
+    padding: 120px 0 120px;
+    height: 595px;
+    &-inner {
+      flex-direction: column;
+      align-items: center;
+    }
+    &-heading {
+      margin-bottom: 40px;
+      margin-left: 0;
+      text-align: center;
+      &::before {
+        width: 48px;
+        height: 2px;
+        left: 100px;
+        top: -5px;
+      }
+    }
+    &-social {
+      @include gridPlayout(2, 36px);
+      width: 100%;
+    }
+  }
+  .ask {
+    &-inner {
+      width: 100%;
+      &__group {
+        .item__line {
+          width: 100%;
+        }
+      }
     }
   }
   .footer {
@@ -27,23 +81,119 @@
 
 // Medium devices (tablets, 768px and up)
 @media screen and (min-width: 768px) and (max-width: 991.98px) {
+  .header {
+    padding: 20px 0;
+    .header-logo__menu,
+    .header-icon {
+      display: none;
+    }
+  }
+  .overplay-mobile {
+    display: none;
+  }
+  .hero {
+    &-text {
+      margin-top: 50px;
+      &__heading {
+        text-align: center;
+        font-size: 7rem;
+      }
+      &__desc {
+        margin-left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+      }
+      &__btn {
+        display: inline-block;
+        margin-left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        .hero__btn {
+          width: 200px;
+        }
+        .hero__link {
+          display: block;
+          margin-left: 0;
+          padding: 10px 0;
+        }
+      }
+      &__social {
+        justify-content: center;
+        margin-top: 50px;
+      }
+    }
+    &-bg {
+      display: none;
+    }
+    &-photo {
+      &__bg {
+        left: -120px;
+      }
+      &__people {
+        left: 85px;
+      }
+    }
+  }
+  .client {
+    padding: 100px 0;
+    height: 450px;
+    &-social {
+      @include gridPlayout(4, 20px);
+      &__item:nth-child(4),
+      &__item:last-child {
+        padding-left: 20px;
+      }
+    }
+  }
+  .special {
+    &-body {
+      &__item {
+        background-color: rgb(239 235 255);
+        margin-top: 20px;
+      }
+    }
+  }
+  .project {
+    height: auto;
+    padding-bottom: 50px;
+    &-top {
+      display: inline;
+      &__desc {
+        width: auto;
+        margin-top: 20px;
+        margin-left: 0;
+      }
+    }
+  }
+  .designer {
+    &-top__number {
+      width: 100%;
+    }
+  }
+  .people {
+    height: auto;
+    padding-bottom: 20px;
+    &-inner {
+      &__heading {
+        padding-top: 100px;
+      }
+    }
+  }
+  .atmos {
+    .atmos-pic {
+      padding-top: 10px;
+    }
+  }
+  .book {
+    padding-top: 50px;
+  }
+  .header:nth-last-of-type(1) {
+    display: none;
+  }
 }
 
 // Small devices (landscape phones, 576px and up)
 @media screen and (max-width: 767.98px) {
-  @mixin gridPlayout($column, $space) {
-    --number-columns: #{$column};
-    --space: #{$space};
-    display: flex;
-    flex-wrap: wrap;
-    row-gap: $space;
-    margin-left: calc(-1 * $space);
-
-    > * {
-      width: calc((100% / $column) - $space);
-      margin-left: $space;
-    }
-  }
   .header {
     &-inner {
       flex-direction: row-reverse;
@@ -118,29 +268,6 @@
     }
     &-bg {
       display: none;
-    }
-  }
-  .client {
-    padding: 120px 0 120px;
-    height: 595px;
-    &-inner {
-      flex-direction: column;
-      align-items: center;
-    }
-    &-heading {
-      margin-bottom: 40px;
-      margin-left: 0;
-      text-align: center;
-      &::before {
-        width: 48px;
-        height: 2px;
-        left: 100px;
-        top: -5px;
-      }
-    }
-    &-social {
-      @include gridPlayout(2, 36px);
-      width: 100%;
     }
   }
   .special {
@@ -296,7 +423,7 @@
           }
           p {
             text-align: left;
-            width: 70px;
+            width: 74px;
             font-size: 1.6rem;
             font-weight: 400;
             line-height: 1.38;
@@ -337,7 +464,6 @@
   }
   .ask {
     &-inner {
-      width: 370px;
       margin-left: 50%;
       transform: translateX(-50%);
       &__heading {
@@ -363,7 +489,6 @@
           padding: 15px 0 15px;
         }
         .item__line {
-          width: 370px;
           transform: translateY(-95px);
         }
         .ask-inner__action {
