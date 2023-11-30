@@ -2374,7 +2374,7 @@ input:nth-of-type(5):checked ~ .ask-inner__group:nth-of-type(5) figure:first-chi
     letter-spacing: -0.168rem;
   }
   .hero-text__desc {
-    width: 318px;
+    width: min(318px, 100%);
     font-size: 1.6rem;
     margin-bottom: 30px;
   }
@@ -2413,11 +2413,11 @@ input:nth-of-type(5):checked ~ .ask-inner__group:nth-of-type(5) figure:first-chi
     font-size: 3.6rem;
   }
   .special-top__desc {
-    width: 350px;
+    width: min(350px, 100%);
     font-size: 1.6rem;
   }
   .special-scroll {
-    width: 100vw;
+    width: 100%;
     flex-wrap: nowrap;
     overflow-x: hidden;
   }
@@ -2467,22 +2467,22 @@ input:nth-of-type(5):checked ~ .ask-inner__group:nth-of-type(5) figure:first-chi
     transform: translateX(0);
   }
   .special input:nth-of-type(2):checked ~ .special-scroll .col:nth-child(1) {
-    transform: translateX(-100vw);
+    transform: translateX(-100%);
   }
   .special input:nth-of-type(2):checked ~ .special-scroll .col:nth-child(2) {
-    transform: translateX(-100vw);
+    transform: translateX(-100%);
   }
   .special input:nth-of-type(2):checked ~ .special-scroll .col:nth-child(3) {
-    transform: translateX(-100vw);
+    transform: translateX(-100%);
   }
   .special input:nth-of-type(3):checked ~ .special-scroll .col:nth-child(1) {
-    transform: translateX(-200vw);
+    transform: translateX(-200%);
   }
   .special input:nth-of-type(3):checked ~ .special-scroll .col:nth-child(2) {
-    transform: translateX(-200vw);
+    transform: translateX(-200%);
   }
   .special input:nth-of-type(3):checked ~ .special-scroll .col:nth-child(3) {
-    transform: translateX(-200vw);
+    transform: translateX(-200%);
   }
   .special input:nth-of-type(1):checked ~ .special-label:nth-of-type(1) {
     background-color: blue;
@@ -2512,13 +2512,14 @@ input:nth-of-type(5):checked ~ .ask-inner__group:nth-of-type(5) figure:first-chi
     width: 100%;
   }
   .project-top__heading {
-    width: 300px;
+    width: min(300px, 100%);
     font-size: 3.6rem;
     line-height: 1.17;
     margin-top: 69px;
     padding-bottom: 20px;
   }
   .project-top__desc {
+    width: min(370px, 100%);
     margin: 0;
   }
   .project-body {
@@ -2561,11 +2562,11 @@ input:nth-of-type(5):checked ~ .ask-inner__group:nth-of-type(5) figure:first-chi
     margin: 10px 0 20px;
   }
   .designer-top__desc {
-    width: 350px;
+    width: min(350px, 100%);
     font-size: 1.6rem;
   }
   .designer-top__number {
-    width: 350px;
+    width: min(350px, 100%);
     margin-top: 50px;
     margin-bottom: 40px;
   }
@@ -2600,12 +2601,12 @@ input:nth-of-type(5):checked ~ .ask-inner__group:nth-of-type(5) figure:first-chi
     letter-spacing: -0.144rem;
   }
   .people-inner__desc {
-    width: 350px;
+    width: min(350px, 100%);
     font-size: 1.6rem;
     padding: 20px 0 40px;
   }
   .people-inner__quotes {
-    width: 350px;
+    width: min(350px, 100%);
     font-size: 1.8rem;
   }
   .people-inner__avarta {
@@ -2619,7 +2620,7 @@ input:nth-of-type(5):checked ~ .ask-inner__group:nth-of-type(5) figure:first-chi
     transform: translateX(-50%);
   }
   .ask-inner__heading {
-    width: 316px;
+    width: min(316px, 100%);
     font-size: 3.6rem;
     letter-spacing: -0.144rem;
   }
@@ -2628,7 +2629,7 @@ input:nth-of-type(5):checked ~ .ask-inner__group:nth-of-type(5) figure:first-chi
     margin-top: 40px;
   }
   .ask-inner__group .ask-inner__item {
-    width: 370px;
+    width: max(370px, 100%);
   }
   .ask-inner__group .item__heading {
     width: 265px;
@@ -2680,7 +2681,7 @@ input:nth-of-type(5):checked ~ .ask-inner__group:nth-of-type(5) figure:first-chi
     letter-spacing: -0.144rem;
   }
   .atmos-desc {
-    width: 350px;
+    width: min(350px, 100%);
     font-size: 1.6rem;
     padding: 20px 0 10px;
   }
@@ -2789,7 +2790,7 @@ input:nth-of-type(5):checked ~ .ask-inner__group:nth-of-type(5) figure:first-chi
     padding: 10px 0 10px;
   }
   .book-inner__desc {
-    width: 350px;
+    width: min(350px, 100%);
     font-size: 1.6rem;
   }
   .book-inner__btn {
