@@ -1,0 +1,19 @@
+/*=========== Mixin ============*/
+@mixin flexCenter($h: center, $w: center) {
+  display: flex;
+  align-items: $h;
+  justify-content: $w;
+}
+@mixin gridPlayout($column, $space) {
+  --number-columns: #{$column};
+  --space: #{$space};
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: $space;
+  margin-left: calc(-1 * $space);
+
+  > * {
+    width: calc((100% / $column) - $space);
+    margin-left: $space;
+  }
+}

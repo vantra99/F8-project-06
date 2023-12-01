@@ -1,0 +1,19 @@
+/*========= Common =========*/
+a {
+  text-decoration: none;
+}
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #5d3bee;
+  padding: 16px 37px;
+  color: #fdfdfd;
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 1.67;
+}
+.btn:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}

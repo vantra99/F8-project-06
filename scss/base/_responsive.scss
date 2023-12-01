@@ -1,16 +1,4 @@
-@mixin gridPlayout($column, $space) {
-  --number-columns: #{$column};
-  --space: #{$space};
-  display: flex;
-  flex-wrap: wrap;
-  row-gap: $space;
-  margin-left: calc(-1 * $space);
-
-  > * {
-    width: calc((100% / $column) - $space);
-    margin-left: $space;
-  }
-}
+@use "../abstract" as ab;
 
 // Large devices (desktops, 992px and up)
 @media screen and (min-width: 992px) {
@@ -58,7 +46,7 @@
       }
     }
     &-social {
-      @include gridPlayout(2, 36px);
+      @include ab.gridPlayout(2, 36px);
       width: 100%;
     }
   }
@@ -138,7 +126,7 @@
     padding: 100px 0;
     height: 450px;
     &-social {
-      @include gridPlayout(4, 20px);
+      @include ab.gridPlayout(4, 20px);
       &__item:nth-child(4),
       &__item:last-child {
         padding-left: 20px;
