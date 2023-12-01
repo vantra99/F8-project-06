@@ -357,7 +357,7 @@ select {
       margin-top: 20px;
     }
     .item-text__desc {
-      width: 220px;
+      width: min(220px, 100%);
       color: #51586a;
       font-size: 1.6rem;
       font-weight: 400;
@@ -564,7 +564,7 @@ select {
 
 .ask {
   &-inner {
-    width: 1010px;
+    width: min(1010px, 100%);
     &__heading {
       color: #080415;
       font-size: 5.6rem;
@@ -602,7 +602,7 @@ select {
         transition: 0.5s linear;
       }
       .item__line {
-        width: 1010px;
+        width: min(1010px, 100%);
         height: 2px;
         background-color: #08182f;
         transform: translateY(-30px);

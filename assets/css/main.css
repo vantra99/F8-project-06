@@ -1647,7 +1647,7 @@ select {
   margin-top: 20px;
 }
 .project-body .item-text__desc {
-  width: 220px;
+  width: min(220px, 100%);
   color: #51586a;
   font-size: 1.6rem;
   font-weight: 400;
@@ -1877,7 +1877,7 @@ select {
 }
 
 .ask-inner {
-  width: 1010px;
+  width: min(1010px, 100%);
 }
 .ask-inner__heading {
   color: #080415;
@@ -1917,7 +1917,7 @@ select {
   transition: 0.5s linear;
 }
 .ask-inner__group .item__line {
-  width: 1010px;
+  width: min(1010px, 100%);
   height: 2px;
   background-color: #08182f;
   transform: translateY(-30px);
@@ -2540,7 +2540,7 @@ input:nth-of-type(5):checked ~ .ask-inner__group:nth-of-type(5) figure:first-chi
     margin-top: 0;
   }
   .project-body__item .item-text__desc {
-    width: 176px;
+    width: max(176px, 90%);
     font-size: 1.4rem;
     line-height: 1.42;
     margin: 0;
@@ -2619,11 +2619,9 @@ input:nth-of-type(5):checked ~ .ask-inner__group:nth-of-type(5) figure:first-chi
   .people-inner__avarta span {
     font-size: 2.4rem;
   }
-  .ask-inner {
-    margin-left: 50%;
-    transform: translateX(-50%);
-  }
   .ask-inner__heading {
+    margin-left: 45%;
+    transform: translateX(-50%);
     width: min(316px, 100%);
     font-size: 3.6rem;
     letter-spacing: -0.144rem;
@@ -2633,7 +2631,9 @@ input:nth-of-type(5):checked ~ .ask-inner__group:nth-of-type(5) figure:first-chi
     margin-top: 40px;
   }
   .ask-inner__group .ask-inner__item {
-    width: max(370px, 100%);
+    margin-left: 50%;
+    transform: translateX(-50%);
+    width: clamp(300px, 370px, 100%);
   }
   .ask-inner__group .item__heading {
     width: 265px;

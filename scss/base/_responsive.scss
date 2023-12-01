@@ -365,7 +365,7 @@
           margin-top: 0;
         }
         .item-text__desc {
-          width: 176px;
+          width: max(176px, 90%);
           font-size: 1.4rem;
           line-height: 1.42;
           margin: 0;
@@ -453,9 +453,9 @@
   }
   .ask {
     &-inner {
-      margin-left: 50%;
-      transform: translateX(-50%);
       &__heading {
+        margin-left: 45%;
+        transform: translateX(-50%);
         width: min(316px, 100%);
         font-size: 3.6rem;
         letter-spacing: -0.144rem;
@@ -464,7 +464,9 @@
         width: 100%;
         margin-top: 40px;
         .ask-inner__item {
-          width: max(370px, 100%);
+          margin-left: 50%;
+          transform: translateX(-50%);
+          width: clamp(300px, 370px, 100%);
         }
         .item__heading {
           width: 265px;
